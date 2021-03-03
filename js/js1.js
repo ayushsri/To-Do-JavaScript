@@ -15,8 +15,10 @@ const createList=(names)=> {
     const container = document.getElementsByClassName("hmm").item(0);
     //const list =document.createElement("ul");
     let listItem;
-    //let list;
+    let list3;
+
     names.forEach(name => {
+        let stat="notComplete";
         listItem = document.createElement('li');
         listItem.id = 'item-${name.title}';
         listItem.setAttribute('data-index', name.title)
@@ -28,13 +30,13 @@ const createList=(names)=> {
         button2.innerHTML = "complete";
         button2.className = "button2";
         button1.className = "button1";
-
+        list3=document.createElement("div");
+        list3.id = name.title;
+        list3.textContent = name.description+stat;
+        list3.testContent+=name.dueDate;
+        list3.testContent+=name.dueTime;
+        list3.style.display="none";
         listItem.appendChild(button1);
-
-
-
-
-
         listItem.appendChild(button2);
 
 
@@ -43,22 +45,42 @@ const createList=(names)=> {
         span.className = "close";
         span.appendChild(txt);
         listItem.appendChild(span);
+        button2.addEventListener("click", function () {
+
+            this.parentElement.style.backgroundColor = "yellow";
+            stat="complete";
+            list3.textContent = name.description+stat;
+
+        })
+
+
+        button1.addEventListener("click", function () {
+          /*  this.parentElement.textContent= name.title+"\r\n"+name.dueDate;
+          listItem.appendChild(button2);
+            listItem.appendChild(span);*/
+            var div = document.getElementById(name.title);
+            if (div.style.display !== "none") {
+                div.style.display = "none";
+            }
+            else {
+                div.style.display = "block";
+            }
+
+        })
 
         container.appendChild(listItem);
+        container.appendChild(list3);
         for (i = 0; i < close.length; i++) {
             close[i].onclick = function () {
                 var div = this.parentElement;
                 div.style.display = "none";
             }
         }
-        button2.addEventListener("click", function () {
-
-            this.parentElement.style.backgroundColor = "yellow";
-
-        })
 
        // button1.addEventListener("click", function () {
-        console.log(name.title);
+
+
+
                 //list2.setAttribute('data-index2', "ayush");
                 for (i = 0; i < button1.length; i++) {
 
@@ -145,6 +167,30 @@ function newElement() {
             var div = this.parentElement;
             div.style.display = "none";
         }
+        let button1 = document.createElement("button1");
+        let button2 = document.createElement("button2");
+        button1.innerHTML = "view";
+        button2.innerHTML = "complete";
+        button2.className = "button2";
+        button1.className = "button1";
+
+        button2.addEventListener("click", function () {
+
+            this.parentElement.style.backgroundColor = "yellow";
+
+        })
+
+
+        button1.addEventListener("click", function () {
+            this.parentElement.textContent= name.title+"\r\n"+name.dueDate;
+            li.appendChild(button2);
+            li.appendChild(span);
+
+        })
+
+        li.appendChild(button1);
+        li.appendChild(button2);
+
     }
 }
 
