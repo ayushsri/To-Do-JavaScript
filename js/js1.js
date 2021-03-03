@@ -11,25 +11,27 @@ xhr.onload=(response)=>{
 }
 xhr.send();
 
-const createList=(names)=>{
-    const container=document.getElementsByClassName("hmm").item(0);
+const createList=(names)=> {
+    const container = document.getElementsByClassName("hmm").item(0);
     //const list =document.createElement("ul");
     let listItem;
-    let list;
-    names.forEach(name=>{
-        listItem=document.createElement('li');
-        listItem.id='item-${name.title}';
-        listItem.setAttribute('data-index',name.title)
-        listItem.textContent=name.title;
+    //let list;
+    names.forEach(name => {
+        listItem = document.createElement('li');
+        listItem.id = 'item-${name.title}';
+        listItem.setAttribute('data-index', name.title)
+        listItem.textContent = name.title;
         listItem.classList.add("list-Item");
-        var button1 = document.createElement("button1");
+        let button1 = document.createElement("button1");
+        let button2 = document.createElement("button2");
         button1.innerHTML = "view";
+        button2.innerHTML = "complete";
+        button2.className = "button2";
+        button1.className = "button1";
 
         listItem.appendChild(button1);
 
-        var button2 = document.createElement("button2");
-        button2.innerHTML = "complete";
-        button2.className="button2";
+
 
 
 
@@ -42,27 +44,42 @@ const createList=(names)=>{
         span.appendChild(txt);
         listItem.appendChild(span);
 
-       container.appendChild(listItem);
+        container.appendChild(listItem);
         for (i = 0; i < close.length; i++) {
-            close[i].onclick = function() {
+            close[i].onclick = function () {
                 var div = this.parentElement;
                 div.style.display = "none";
             }
         }
-        button2.addEventListener ("click", function() {
+        button2.addEventListener("click", function () {
 
             this.parentElement.style.backgroundColor = "yellow";
 
+        })
 
-        },false);
-        button1.addEventListener ("click", function() {
-            document.getElementsByClassName("Details").value(names.time);
+       // button1.addEventListener("click", function () {
+        console.log(name.title);
+                //list2.setAttribute('data-index2', "ayush");
+                for (i = 0; i < button1.length; i++) {
+
+                    button1[i].onclick = function () {
+                        di = document.getElementsByClassName("Details").item(0);
+                        let list2;
+                            list2 = document.createElement('h1');
+                            list2.id = 'item-${hey}';
+                            list2.setAttribute('data-index2', name.title);
+                            list2.textContent = name.title;
+
+                        di.appendChild(list2);
+                    }
+                }
+          //  }, false);
 
 
 
-        },false);
+
+
     })
-
 
 }
 
