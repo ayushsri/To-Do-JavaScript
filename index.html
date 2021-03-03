@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <title>ToDo</title>
     <link rel="stylesheet" href="dist/styles/main.css">
-
 </head>
 <body>
 
 <div id="myDIV" class="header">
-    <h2 style="margin:5px">My To Do List</h2>
+    <h2 style="margin:5px" >To Do List</h2>
+    <section class="head1">
     <input type="text" id="myInput" placeholder="Title..." required>
-    <input type="text" id="description" placeholder="Description..." required>
-    <input type="date" id="dueDate" placeholder="Date..." required>
-    <input type="time" id="dueTime" placeholder="Time..." required>
+    <input type="text" id="description" placeholder="Description..." >
+    <input type="date" id="dueDate" placeholder="Date..." >
+    <input type="time" id="dueTime" placeholder="Time...">
+    </section>
     <span onclick="newElement()" class="addBtn">Add</span>
 </div>
-
+<div class="Details"></div>
 <ul id="myUL" class="hmm">
     <!--<li>Hit the gym</li>-->
 </ul>

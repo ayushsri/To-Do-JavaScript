@@ -56,8 +56,8 @@ const createList=(names)=>{
 
         },false);
         button1.addEventListener ("click", function() {
+            document.getElementsByClassName("Details").value(names.time);
 
-            this.parentElement.style.backgroundColor = "yellow";
 
 
         },false);
