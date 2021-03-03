@@ -113,6 +113,7 @@ function fun123() {
     } else {
         document.getElementById("myUL").appendChild(li);
     }
+    //get element by value
     document.getElementById("myInput").value = "";
 
     let span = document.createElement("SPAN");
@@ -136,11 +137,7 @@ function fun123() {
         button1.className = "button1";
 
 
-        let list4;
-        list4=document.createElement("div");
-        list4.id = inputValue ;
-        list4.textContent ="Description: " +discriptionValue+" Status: "+"Not complete"+" Due Date :"+ dateValue+" Time: "+timeValue;
-        list4.style.display="none";
+
 
 
 
@@ -148,10 +145,13 @@ function fun123() {
 
             this.parentElement.style.backgroundColor = "yellow";
             stat1="complete";
-            list4.textContent ="Description: " +discriptionValue+" Status: "+stat1+" Due Date :"+dateValue+" Time: "+timeValue;
-
+           //list4.textContent ="Description: " +discriptionValue+" Status: "+stat1+" Due Date :"+dateValue+" Time: "+timeValue;
         })
-
+        let list4;
+        list4=document.createElement("div");
+        list4.id = inputValue ;
+        list4.textContent ="Description: " +discriptionValue+" Status: "+stat1+" Due Date :"+ dateValue+" Time: "+timeValue;
+        list4.style.display="none";
 
 
         button1.addEventListener("click", function () {

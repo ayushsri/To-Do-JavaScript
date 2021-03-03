@@ -1,9 +1,17 @@
-
-
+/* set length*/
+$length :3px solid;
 body {
   margin: 0;
   margin-left: 10%;
   margin-right: 10%;
+}
+/* inclue maxin*/
+@mixin left-side{
+  float:left;
+  width: 100%;
+}
+.left{
+  @include left-side;
 }
 
 /* Include the padding and border in an element's total width and height */
