@@ -1,0 +1,23 @@
+{
+  "name": "assin6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass scss/main.scss --output dist/styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2021/assignment-6-Ayush-Srivastava-northeastern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2021/assignment-6-Ayush-Srivastava-northeastern/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2021/assignment-6-Ayush-Srivastava-northeastern#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "save": "^2.4.0"
+  }
+}
