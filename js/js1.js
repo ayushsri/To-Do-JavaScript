@@ -32,9 +32,7 @@ const createList=(names)=> {
         button1.className = "button1";
         list3=document.createElement("div");
         list3.id = name.title;
-        list3.textContent = name.description+stat;
-        list3.testContent+=name.dueDate;
-        list3.testContent+=name.dueTime;
+        list3.textContent ="Description: " +name.description+" Status: "+stat+" Due Date :"+ name.dueDate+" Time: "+name.dueTime;
         list3.style.display="none";
         listItem.appendChild(button1);
         listItem.appendChild(button2);
@@ -49,7 +47,7 @@ const createList=(names)=> {
 
             this.parentElement.style.backgroundColor = "yellow";
             stat="complete";
-            list3.textContent = name.description+stat;
+            list3.textContent = "Description: " +name.description+" Status: "+stat+" Due Date :"+ name.dueDate+" Time: "+name.dueTime;
 
         })
 
@@ -82,19 +80,7 @@ const createList=(names)=> {
 
 
                 //list2.setAttribute('data-index2', "ayush");
-                for (i = 0; i < button1.length; i++) {
 
-                    button1[i].onclick = function () {
-                        di = document.getElementsByClassName("Details").item(0);
-                        let list2;
-                            list2 = document.createElement('h1');
-                            list2.id = 'item-${hey}';
-                            list2.setAttribute('data-index2', name.title);
-                            list2.textContent = name.title;
-
-                        di.appendChild(list2);
-                    }
-                }
           //  }, false);
 
 
