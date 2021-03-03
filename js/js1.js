@@ -22,6 +22,19 @@ const createList=(names)=>{
         listItem.setAttribute('data-index',name.title)
         listItem.textContent=name.title;
         listItem.classList.add("list-Item");
+        var button1 = document.createElement("button1");
+        button1.innerHTML = "view";
+
+        listItem.appendChild(button1);
+
+        var button2 = document.createElement("button2");
+        button2.innerHTML = "complete";
+        button2.className="button2";
+
+
+
+        listItem.appendChild(button2);
+
 
         var span = document.createElement("SPAN");
         var txt = document.createTextNode("\u00D7");
@@ -36,12 +49,22 @@ const createList=(names)=>{
                 div.style.display = "none";
             }
         }
+        button2.addEventListener ("click", function() {
 
+            this.parentElement.style.backgroundColor = "yellow";
+
+
+        },false);
+        button1.addEventListener ("click", function() {
+
+            this.parentElement.style.backgroundColor = "yellow";
+
+
+        },false);
     })
 
 
 }
-
 
 var myNodelist = document.getElementsByClassName("list-Item");
 var i;
@@ -106,4 +129,30 @@ function newElement() {
             div.style.display = "none";
         }
     }
+}
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
+var yyyy = today.getFullYear();
+if(dd<10){
+    dd='0'+dd
+}
+if(mm<10){
+    mm='0'+mm
+}
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("dueDate").setAttribute("min", today);
+
+var today1 = new Date();
+var time = today1.getHours() + ":" + today1.getMinutes() + ":" + today1.getSeconds();
+
+var date1=document.getElementById("dueDate").value;
+console.log(date1);
+
+if(date1==today)
+{
+    document.getElementById("dueTime").min = time;
+
 }

@@ -4,7 +4,7 @@ body {
 }
 
 /* Include the padding and border in an element's total width and height */
-* {
+*{
   box-sizing: border-box;
 }
 
@@ -117,4 +117,36 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
+}
+
+button1 {
+  margin-top: 10px;
+  line-height: 10px;
+  font-weight: bold;
+  padding: 10px;
+  background: salmon;
+  border: none;
+  position:absolute;
+  right: 10%;
+  top: 0;
+}
+
+button1:hover {
+  background: lightsalmon;
+}
+
+button2 {
+  margin-top: 10px;
+  line-height: 10px;
+  font-weight: bold;
+  padding: 10px;
+  background: salmon;
+  border: none;
+  position:absolute;
+  right: 20%;
+  top: 0;
+}
+
+button2:hover {
+  background: lightsalmon;
 }
