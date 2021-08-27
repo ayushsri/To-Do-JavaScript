@@ -123,12 +123,14 @@ function fun123() {
     li.appendChild(span);
     //append the child
     let close = document.getElementsByClassName("close");
+    //loop for close button
 
     for (let i = 0; i < close.length; i++) {
         close[i].onclick = function() {
             let div = this.parentElement;
             div.style.display = "none";
         }
+        //added button view and delete
         let button1 = document.createElement("button1");
         let button2 = document.createElement("button2");
         button1.innerHTML = "view";
